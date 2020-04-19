@@ -64,12 +64,12 @@
         </div>
         <div id="start_call">
         </div>
-        <audio id="wx_music" src="static/mp3/call.mp3" controls loop autoplay></audio>
+        <audio id="wx_music" src="https://assest.iaoe.xyz/blackmancall/call.mp3" controls loop autoplay></audio>
     </div>
     <div id="jntm"></div>
     <div id="hr">
     </div>
-    <audio id="mp32" controls loop src="static/mp3/astronomia.mp3">
+    <audio id="mp32" controls loop src="https://assest.iaoe.xyz/blackmancall/astronomia.mp3">
         您的浏览器不支持 audio 元素。
     </audio>
     <script>
@@ -92,23 +92,23 @@
             mp32.play();
             hr.innerHTML = '<iframe id="jntm_music" frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="static/mp3/astronomia.mp3"></iframe>';
             if (document.body.clientWidth > document.body.clientHeight) {
-                jntm.innerHTML = '<img  src="static/gif/0.gif" width="100%" style="margin: 0" >';
+                jntm.innerHTML = '<img  src="https://assest.iaoe.xyz/blackmancall/0.gif" width="100%" style="margin: 0" >';
             } else {
-                jntm.innerHTML = '<img  src="static/gif/0.gif" width="100%" style="margin:45% 0" >';
+                jntm.innerHTML = '<img  src="https://assest.iaoe.xyz/blackmancall/0.gif" width="100%" style="margin:45% 0" >';
             } setTimeout(function () {
                 if (document.body.clientWidth > document.body.clientHeight) {
-                    jntm.innerHTML = '<img id="img1" src="static/jpg/1.jpg"  width="100%" style="margin:0">';
+                    jntm.innerHTML = '<img id="img1" src="https://assest.iaoe.xyz/blackmancall/1.jpg"  width="100%" style="margin:0">';
                 } else {
-                    jntm.innerHTML = '<img id="img1" src="static/jpg/1.jpg"  width="100%" style="margin:45% 0">';
+                    jntm.innerHTML = '<img id="img1" src="https://assest.iaoe.xyz/blackmancall/1.jpg"  width="100%" style="margin:45% 0">';
                 }
             }, 4000);
             setTimeout(function () {
                 var img1 = document.getElementById("img1");
                 jntm.removeChild(img1);
                 if (document.body.clientWidth > document.body.clientHeight) {
-                    jntm.innerHTML = '<img  src="static/gif/1.gif" width="100%" style="margin: 0" >';
+                    jntm.innerHTML = '<img  src="https://assest.iaoe.xyz/blackmancall/1.gif" width="100%" style="margin: 0" >';
                 } else {
-                    jntm.innerHTML = '<img  src="static/gif/1.gif" width="100%" style="margin:45% 0" >';
+                    jntm.innerHTML = '<img  src="https://assest.iaoe.xyz/blackmancall/1.gif" width="100%" style="margin:45% 0" >';
                 }
             }, 7500);
         };
@@ -123,7 +123,7 @@
             container.style.display = "none";
             var jntm = document.getElementById("jntm");
             jntm.style.display = "block";
-            jntm.innerHTML = '<img  src="static/gif/2.gif" height="100%" style="margin: 0 auto" >';
+            jntm.innerHTML = '<img  src="https://assest.iaoe.xyz/blackmancall/2.gif" height="100%" style="margin: 0 auto" >';
             setTimeout(
                 function(){
                     start_play()
