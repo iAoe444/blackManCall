@@ -20,6 +20,7 @@
         align-items: center;
     }
     #container {
+        position: relative;
         height: 100%;
         background: url('static/jpg/0.jpg') no-repeat top center/auto 100%;
 
@@ -32,16 +33,37 @@
     }
     #jntm {
         display: none;
+        height: 100%;
     }
     audio,
     #jntm_music {
         display: none;
+    }
+    #end_call{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        top: 1470px;
+        left: 200px;
+        border-radius: 50%;
+    }
+    #start_call{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        top: 1470px;
+        left: 600px;
+        border-radius: 50%;
     }
 </style>
 </head>
 
 <body>
     <div id="container">
+        <div id="end_call">
+        </div>
+        <div id="start_call">
+        </div>
         <audio id="wx_music" src="static/mp3/call.mp3" controls loop autoplay></audio>
     </div>
     <div id="jntm"></div>
@@ -58,12 +80,15 @@
                 ele.play();
             }, 500);
         })
-        document.getElementById("container").onclick = function () {
+        var end_play = function(){
             ele.pause();
-            this.removeChild(ele);
-            this.style.display = "none";
+            var container = document.getElementById("container")
+            container.removeChild(ele);
+            container.style.display = "none";
             var jntm = document.getElementById("jntm");
             jntm.style.display = "block";
+        }
+        var start_play = function () {
             mp32.play();
             hr.innerHTML = '<iframe id="jntm_music" frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="static/mp3/astronomia.mp3"></iframe>';
             if (document.body.clientWidth > document.body.clientHeight) {
@@ -87,6 +112,24 @@
                 }
             }, 7500);
         };
+        document.getElementById("start_call").onclick = function(){
+            end_play()
+            start_play()
+        }
+        document.getElementById("end_call").onclick = function() {
+            ele.pause();
+            var container = document.getElementById("container")
+            container.removeChild(ele);
+            container.style.display = "none";
+            var jntm = document.getElementById("jntm");
+            jntm.style.display = "block";
+            jntm.innerHTML = '<img  src="static/gif/2.gif" height="100%" style="margin: 0 auto" >';
+            setTimeout(
+                function(){
+                    start_play()
+                },6000
+            )            
+        }
     </script>
 </body>
 </html>
